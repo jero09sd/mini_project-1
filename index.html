@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>BiliBili</title>
+    <link rel="shortcut icon" href="www.bilibili.tv-images-ftphq/icons8-bilibili-16.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-list icon"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+            </svg>
+            <span class="top-logo"><img src="www.bilibili.tv-images-ftphq/top_logo.svg" alt=""></span>
+        </div>
+        <div class="nav-center">
+            <form class="container-fluid">
+                <div class="input-group">
+                    <input type="text" class="form-control rounded-start-pill " placeholder="Search" id="search_box">
+                    <span class="input-group-text rounded-end-circle"><a><svg xmlns="http://www.w3.org/2000/svg"
+                                width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                            </svg></a></span>
+                </div>
+            </form>
+        </div>
+        <div class="nav-right">
+            <a href="#" class="hidden_search"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="20"
+                    fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path
+                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                </svg></a>
+            <div class="dropdown"><button class="create-btn"><img src="www.bilibili.tv-images-ftphq/jvfYD8faQTgho.svg"
+                        class="create-icon"><span>Create</span></button>
+                <div class="dropdown-content">
+                    <a href="#" class="create-title"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" class="bi bi-upload" viewBox="0 0 16 16">
+                            <path
+                                d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                            <path
+                                d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708l3-3z" />
+                        </svg> Upload Videos <button class="campaign-btn">80 Campaigns</button> </a>
+                    <ul class="create-list">
+                        <hr>
+                        <li class="crt-hover"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="currentColor" class="bi bi-menu-button-wide" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.5A1.5 1.5 0 0 1 1.5 0h13A1.5 1.5 0 0 1 16 1.5v2A1.5 1.5 0 0 1 14.5 5h-13A1.5 1.5 0 0 1 0 3.5v-2zM1.5 1a.5.5 0 0 0-.5.5v2a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 0-.5-.5h-13z" />
+                                    <path
+                                        d="M2 2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm10.823.323-.396-.396A.25.25 0 0 1 12.604 2h.792a.25.25 0 0 1 .177.427l-.396.396a.25.25 0 0 1-.354 0zM0 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V8zm1 3v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2H1zm14-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2h14zM2 8.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0 4a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z" />
+                                </svg>My Videos</a></li>
+                        <li class="crt-hover"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="currentColor" class="bi bi-graph-up" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M0 0h1v15h15v1H0V0Zm14.817 3.113a.5.5 0 0 1 .07.704l-4.5 5.5a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61 4.15-5.073a.5.5 0 0 1 .704-.07Z" />
+                                </svg>Data Analysis</a></li>
+                        <li class="crt-hover"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="currentColor" class="bi bi-chat-left-text" viewBox="0 0 16 16">
+                                    <path
+                                        d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                    <path
+                                        d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
+                                </svg>Manage Interaction</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="dropdown"><a href="#" class="hidden-nav"><img
+                        src="www.bilibili.tv-images-ftphq/5Hi4aT4rAtar4.svg"></a>
+                <div class="dropdown-content">
+                    <ul class="history">
+                        <li><a href="#" class="history-title">Sign in to sync history</a></li>
+                        <li><a href="#"><button>Sign in</button></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="dropdown"><a href="#" class="hidden-nav"><img
+                        src="www.bilibili.tv-images-ftphq/ByYhen9UPooM2.svg">
+                    <div class="dropdown-content1">
+                        <ul class="my-list">
+                            <li><a href="#" class="myList-title">Sign in to sync My list</a></li>
+                            <li><a href="#"><button>Sign in</button></a></li>
+                        </ul>
+                    </div>
+                </a></div>
+            <div class="dropdown">
+                <a href="#" class="hidden-nav"><img src="www.bilibili.tv-images-ftphq/030uLZORcOECB.svg">
+                    <div class="dropdown-content">
+                        <ul class="three-dots">
+                            <li><a href="#" class="language">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-globe" viewBox="0 0 16 16">
+                                        <path
+                                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z" />
+                                    </svg>language:
+                                    <div class="custom-select" style="width:200px;">
+                                        <select name="text" id="lang-select">
+                                            <option selected disabled>Select your language</option>
+                                            <option class="lang-items" selected>English</option>
+                                            <option class="lang-items" value="thailand">ประเทศ</option>
+                                            <option class="lang-items" value="vietnam">Tiếng Việt</option>
+                                            <option class="lang-items" value="indonesia">Bahasa Indonesia
+                                            </option>
+                                            <option class="lang-items" value="malaysia">Bahasa Melayu</option>
+                                        </select>
+                                        <span class="custom-arrow"></span>
+                                    </div>
+                                </a></li>
+                            <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="bi bi-question-square" viewBox="0 0 16 16">
+                                        <path
+                                            d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                        <path
+                                            d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
+                                    </svg>Send Feedback</a></li>
+                        </ul>
+                    </div>
+                </a>
+            </div>
+            <div class="dropdown"><a href="#" class="hidden-nav"><button class="hover-button">Log in</button>
+                    <div class="dropdown-content">
+                        <ul class="login-drpdown">
+                            <li><a href="#" class="login-title">Log in and enjoy the followings:</a></li>
+                            <li><a href="#"><img src="www.bilibili.tv-images-ftphq/Y5woZzKiA561I.svg">Free HD
+                                    videos</a>
+                            </li>
+                            <li><a href="#"><img src="www.bilibili.tv-images-ftphq/SCKzHVtK730rm.svg">Synchronize
+                                    browsing records of all ends</a></li>
+                            <li><a href="#"><img src="www.bilibili.tv-images-ftphq/Lc8XwAfJxQ6oM.svg">Send
+                                    comments</a>
+                            </li>
+                            <li><a href="#"><img src="www.bilibili.tv-images-ftphq/wMj186CizYaS6.svg">Watch
+                                    exclusive
+                                    contents</a></li>
+                            <li><a href="#"><button>Log in Now</button></a></li>
+                            <li><span class="create-acc">tap here to<a href="#">create an account</a></span>
+                            </li>
+                        </ul>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class="body-container">
+        <div class="sidebar">
+            <ul class="sidebar-content">
+                <li class="home"><a href="#"><img
+                            src="www.bilibili.tv-images-ftphq/pN0lz30e4Ig4k.svg"><span>Home</span></a>
+                <li><a href="#"><img src="www.bilibili.tv-images-ftphq/kG7UN7r4T4wpR.svg"><span>Anime</span></a></li>
+                <li><a href="#"><img src="www.bilibili.tv-images-ftphq/2XJv0gOGvo4yF.svg"><span>Trending</span></a></li>
+                <li> <a href="#"><img src="www.bilibili.tv-images-ftphq/dxJA6odOu3Y3p.svg"><span>Category</span></a>
+                <li> <a href="#"><img src="www.bilibili.tv-images-ftphq/RqO2DXNFh9qTK.svg"><span>LIVE</span></a></li>
+            </ul>
+            <div class="side-login">
+                <hr>
+                <span>login to view your "Followed" content</span>
+                <button>Log in</button>
+            </div>
+            <div class="footer">
+                <hr>
+                <div class="footer-class">
+                    <a href="#"><span>About us</span></a>
+                    <a href="#"><span>Contact us</span></a>
+                </div>
+                <div class="footer-class">
+                    <a href="#"><span>Get App</span></a>
+                    <a href="#"><span>Terms of Services</span></a>
+                </div>
+                <div class="footer-class-ind">
+                    <a href="#"><span>Privacy Policy</span></a>
+                    <a href="#"><span>Infringement Complaint</span></a>
+                </div>
+                <div class="copyright">
+                    <a href="#"><span>@2023 Bilibili</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="cat-title-top">
+                <h3>Trending</h3>
+                <div class="hidden-view"><img src="www.bilibili.tv-images-ftphq/icon_circle_arrow-105f9280.svg" alt="">
+                    <button class="hidden-view-content">view all</button>
+                </div>
+            </div>
+            <div class="trending">
+                <div class="vid-list">
+                    <a href="#">
+                        <img src="www.bilibili.tv-images-ftphq/2b676966201c5691005335416796049d.jpg@720w_405h_1e_1c_1f.webp"
+                            class="thumbnail" />
+                    </a>
+                    <div class="flex-div">
+                        <a href="#"><img
+                                src="www.bilibili.tv-images-ftphq/0d19a3e321089b576584a1996ff01a877f14b286.jpg@72w_72h_1e_1c_1f.webp" /></a>
+                        <div class="vid-info">
+                            <a href="#">Sample video</a>
+                            <p>Mni-project</p>
+                            <p>15m Views</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vid-list">
+                    <a href="#">
+                        <img src="www.bilibili.tv-images-ftphq/1a53d74e22ff0a610d0f3a86d31a441e89e7a29f.png@720w_405h_1e_1c_1f.webp"
+                            class="thumbnail" />
+                    </a>
+                    <div class="flex-div">
+                        <a href="#"><img
+                                src="www.bilibili.tv-images-ftphq/0f736eb84d132cf0fe507c0bae9607819a1f782b.png@72w_72h_1e_1c_1f.webp" /></a>
+                        <div class="vid-info">
+                            <a href="#">Sample video</a>
+                            <p>Mni-project</p>
+                            <p>15m Views</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vid-list">
+                    <a href="#">
+                        <img src="www.bilibili.tv-images-ftphq/0db4c304011dbeba8c93b5a5eefe7994.jpg@720w_405h_1e_1c_1f.webp"
+                            class="thumbnail" />
+                    </a>
+                    <div class="flex-div">
+                        <a href="#"><img
+                                src="www.bilibili.tv-images-ftphq/1a362f4a120bc8b342c2820aec61166a309b698d.jpg@72w_72h_1e_1c_1f.webp" /></a>
+                        <div class="vid-info">
+                            <a href="#">Sample video</a>
+                            <p>Mni-project</p>
+                            <p>15m Views</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vid-list">
+                    <a href="#">
+                        <img src="www.bilibili.tv-images-ftphq/1a6aae73a50580c2b19f3580e4ee43bf.jpg@720w_405h_1e_1c_1f.webp"
+                            class="thumbnail" />
+                    </a>
+                    <div class="flex-div">
+                        <a href="#"><img
+                                src="www.bilibili.tv-images-ftphq/5ee0bde0023c9e62741a04a9bfbdd8278c7d1724.jpg@72w_72h_1e_1c_1f.webp" /></a>
+                        <div class="vid-info">
+                            <a href="#">Sample video</a>
+                            <p>Mni-project</p>
+                            <p>15m Views</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vid-list">
+                    <a href="#">
+                        <img src="www.bilibili.tv-images-ftphq/2e8cb90d45072f640de0f587e058bf1d.jpg@720w_405h_1e_1c_1f.webp"
+                            class="thumbnail" />
+                    </a>
+                    <div class="flex-div">
+                        <a href="#"><img
+                                src="www.bilibili.tv-images-ftphq/6c282194a1353474fb10e36c3a3eb7bd99f21f46.png@72w_72h_1e_1c_1f.webp" /></a>
+                        <div class="vid-info">
+                            <a href="#">Sample video</a>
+                            <p>Mni-project</p>
+                            <p>15m Views</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vid-list">
+                    <a href="#">
+                        <img src="www.bilibili.tv-images-ftphq/28e21cfb9ae36e1f03744e6f46ceabfd.jpg@720w_405h_1e_1c_1f.webp"
+                            class="thumbnail" />
+                    </a>
+                    <div class="flex-div">
+                        <a href="#"><img
+                                src="www.bilibili.tv-images-ftphq/8b646874b11155731f8cc98ea6a86175ee094521.jpg@72w_72h_1e_1c_1f.webp" /></a>
+                        <div class="vid-info">
+                            <a href="#">Sample video</a>
+                            <p>Mni-project</p>
+                            <p>15m Views</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vid-list">
+                    <a href="#">
+                        <img src="www.bilibili.tv-images-ftphq/71fb4b5f5d9dc43af26295a0cb97b613.jpg@720w_405h_1e_1c_1f.webp"
+                            class="thumbnail" />
+                    </a>
+                    <div class="flex-div">
+                        <a href="#"><img
+                                src="www.bilibili.tv-images-ftphq/81dc763328a357ae1e83feb78f683d712899e699.png@72w_72h_1e_1c_1f.webp" /></a>
+                        <div class="vid-info">
+                            <a href="#">Sample video</a>
+                            <p>Mni-project</p>
+                            <p>15m Views</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vid-list">
+                    <a href="#">
+                        <img src="www.bilibili.tv-images-ftphq/4ece908a2d746a7bede138e12537d258.jpg@720w_405h_1e_1c_1f.webp"
+                            class="thumbnail" />
+                    </a>
+                    <div class="flex-div">
+                        <a href="#"><img
+                                src="www.bilibili.tv-images-ftphq/561e2c7f962051eda91011ca3410ccccae52c63c.jpg@72w_72h_1e_1c_1f.webp" /></a>
+                        <div class="vid-info">
+                            <a href="#">Sample video</a>
+                            <p>Mni-project</p>
+                            <p>15m Views</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vid-list">
+                    <a href="#">
+                        <img src="www.bilibili.tv-images-ftphq/850ddf40322f94f163dc8c873d3fa7cd4aca2491.png@720w_405h_1e_1c_1f.webp"
+                            class="thumbnail" />
+                    </a>
+                    <div class="flex-div">
+                        <a href="#"><img
+                                src="www.bilibili.tv-images-ftphq/3619ad69138cb8cace50ef295330b5c74730a00f.jpg@72w_72h_1e_1c_1f.webp" /></a>
+                        <div class="vid-info">
+                            <a href="#">Sample video</a>
+                            <p>Mni-project</p>
+                            <p>15m Views</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vid-list">
+                    <a href="#">
+                        <img src="www.bilibili.tv-images-ftphq/3c1ffe2609f220da707b372e125a86cb7c99eead.png@720w_405h_1e_1c_1f.webp"
+                            class="thumbnail" />
+                    </a>
+                    <div class="flex-div">
+                        <a href="#"><img
+                                src="www.bilibili.tv-images-ftphq/32667d0379cccbf41607e98f4fd581353318e188.jpg@72w_72h_1e_1c_1f.webp" /></a>
+                        <div class="vid-info">
+                            <a href="#">Sample video</a>
+                            <p>Mni-project</p>
+                            <p>15m Views</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cat-title">
+                <div class="anime-cat">
+                    <h3>Anime</h3>
+                    <a href="#" class="trend"><button>Trending</button> </a>
+                    <ul class="cat-list">
+                        <li>SAT</li>
+                        <li>SUN</li>
+                        <li>MON</li>
+                        <li>TUE</li>
+                        <li>WED</li>
+                        <li>THU</li>
+                        <li>FRI</li>
+                    </ul>
+                </div>
+                <span class="calendar-end"></span>
+            </div>
+            <div class="trending">
+                <div class="vid-list">
+                    <a href="#">
+                        <img src="www.bilibili.tv-images-ftphq/8852ad63bd2683c7ebbf7deb955fb4e8.jpg@720w_405h_1e_1c_1f.webp"
+                            class="thumbnail" />
+                    </a>
+                    <div class="flex-div">
+                        <a href="#"><img
+                                src="www.bilibili.tv-images-ftphq/61376d183fcc3e2c2827f9414a4fc16f68dc6a3f.jpg@72w_72h_1e_1c_1f.webp" /></a>
+                        <div class="vid-info">
+                            <a href="#">Sample video</a>
+                            <p>Mni-project</p>
+                            <p>15m Views</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vid-list">
+                    <a href="#">
+                        <img src="www.bilibili.tv-images-ftphq/68821fc79a7f54f30ec36971900b80e6.jpg@720w_405h_1e_1c_1f.webp"
+                            class="thumbnail" />
+                    </a>
+                    <div class="flex-div">
+                        <a href="#"><img
+                                src="www.bilibili.tv-images-ftphq/97683ef13b0ef34a94da00af98cb6eb41349f166.jpg@72w_72h_1e_1c_1f.webp" /></a>
+                        <div class="vid-info">
+                            <a href="#">Sample video</a>
+                            <p>Mni-project</p>
+                            <p>15m Views</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vid-list">
+                    <a href="#">
+                        <img src="www.bilibili.tv-images-ftphq/1189c6adf590acbcc12be5c364689266.jpg@720w_405h_1e_1c_1f.webp"
+                            class="thumbnail" />
+                    </a>
+                    <div class="flex-div">
+                        <a href="#"><img
+                                src="www.bilibili.tv-images-ftphq/168430ba042e2ccb5d51c478e7678b2e5a70ec9e.jpg@72w_72h_1e_1c_1f.webp" /></a>
+                        <div class="vid-info">
+                            <a href="#">Sample video</a>
+                            <p>Mni-project</p>
+                            <p>15m Views</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vid-list">
+                    <a href="#">
+                        <img src="www.bilibili.tv-images-ftphq/0808b5b02fe0c08265bbaf9c7bde9e6e.jpg@720w_405h_1e_1c_1f.webp"
+                            class="thumbnail" />
+                    </a>
+                    <div class="flex-div">
+                        <a href="#"><img
+                                src="www.bilibili.tv-images-ftphq/675dc1ff1e624ce22b382c0abfa6c2a3408bd1a6.jpg@72w_72h_1e_1c_1f.webp" /></a>
+                        <div class="vid-info">
+                            <a href="#">Sample video</a>
+                            <p>Mni-project</p>
+                            <p>15m Views</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vid-list parent">
+                    <a href="#">
+                        <img src="www.bilibili.tv-images-ftphq/732b1b4d2b7a16c8d5c4ca4dcee0dc8a.jpg@720w_405h_1e_1c_1f.webp"
+                            class="thumbnail" />
+                    </a>
+                    <div class="flex-div">
+                        <a href="#"><img
+                                src="www.bilibili.tv-images-ftphq/632cdcc37a8ed0b054b65278ea4853c5e87f2587.png@72w_72h_1e_1c_1f.webp" /></a>
+                        <div class="vid-info">
+                            <a href="#">Sample video</a>
+                            <p>Mni-project</p>
+                            <p>15m Views</p>
+                        </div>
+                    </div>
+                    <span class="white-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                        <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+                      </svg></span>
+                </div>
+            </div>
+            <div class="cat-title">
+                <h3>Recommended for you</h3>
+            </div>
+            <div class="trending">
+                <div class="vid-list">
+                    <a href="#">
+                        <img src="www.bilibili.tv-images-ftphq/850ddf40322f94f163dc8c873d3fa7cd4aca2491.png@720w_405h_1e_1c_1f.webp"
+                            class="thumbnail" />
+                    </a>
+                    <div class="flex-div">
+                        <a href="#"><img
+                                src="www.bilibili.tv-images-ftphq/4528f446455c1d1bd5b991d7d64de20a74c8c37d.png@72w_72h_1e_1c_1f.webp" /></a>
+                        <div class="vid-info">
+                            <a href="#">Sample video</a>
+                            <p>Mni-project</p>
+                            <p>15m Views</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vid-list">
+                    <a href="#">
+                        <img src="www.bilibili.tv-images-ftphq/5201d836bb58187b93365873c0b0b868.jpg@720w_405h_1e_1c_1f.webp"
+                            class="thumbnail" />
+                    </a>
+                    <div class="flex-div">
+                        <a href="#"><img
+                                src="www.bilibili.tv-images-ftphq/32667d0379cccbf41607e98f4fd581353318e188.jpg@72w_72h_1e_1c_1f.webp" /></a>
+                        <div class="vid-info">
+                            <a href="#">Sample video</a>
+                            <p>Mni-project</p>
+                            <p>15m Views</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vid-list">
+                    <a href="#">
+                        <img src="www.bilibili.tv-images-ftphq/53267cccadc5fc21c59380c10866011b.jpg@720w_405h_1e_1c_1f.webp"
+                            class="thumbnail" />
+                    </a>
+                    <div class="flex-div">
+                        <a href="#"><img
+                                src="www.bilibili.tv-images-ftphq/97683ef13b0ef34a94da00af98cb6eb41349f166.jpg@72w_72h_1e_1c_1f.webp" /></a>
+                        <div class="vid-info">
+                            <a href="#">Sample video</a>
+                            <p>Mni-project</p>
+                            <p>15m Views</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vid-list">
+                    <a href="#">
+                        <img src="www.bilibili.tv-images-ftphq/416340a19e0cbb878bf31d21a1705117.jpg@720w_405h_1e_1c_1f.webp"
+                            class="thumbnail" />
+                    </a>
+                    <div class="flex-div">
+                        <a href="#"><img
+                                src="www.bilibili.tv-images-ftphq/0570628b23701e62e303692348bcab169d2cd847.jpg@72w_72h_1e_1c_1f.webp" /></a>
+                        <div class="vid-info">
+                            <a href="#">Sample video</a>
+                            <p>Mni-project</p>
+                            <p>15m Views</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vid-list">
+                    <a href="#">
+                        <img src="www.bilibili.tv-images-ftphq/611939277e222f45e58884a090815d87.jpg@720w_405h_1e_1c_1f.webp"
+                            class="thumbnail" />
+                    </a>
+                    <div class="flex-div">
+                        <a href="#"><img
+                                src="www.bilibili.tv-images-ftphq/671098086c34e39c903b7e3599c18c25683073d3.jpg@72w_72h_1e_1c_1f.webp" /></a>
+                        <div class="vid-info">
+                            <a href="#">Sample video</a>
+                            <p>Mni-project</p>
+                            <p>15m Views</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vid-list">
+                    <a href="#">
+                        <img src="www.bilibili.tv-images-ftphq/726473347830db3ceee52f69a5073290.jpg@720w_405h_1e_1c_1f.webp"
+                            class="thumbnail" />
+                    </a>
+                    <div class="flex-div">
+                        <a href="#"><img
+                                src="www.bilibili.tv-images-ftphq/0338945180854586916db4cf372c97864c36d048.jpg@72w_72h_1e_1c_1f.webp" /></a>
+                        <div class="vid-info">
+                            <a href="#">Sample video</a>
+                            <p>Mni-project</p>
+                            <p>15m Views</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vid-list">
+                    <a href="#">
+                        <img src="www.bilibili.tv-images-ftphq/a35f07730ad407cb667f546ad7c6a609.jpeg@720w_405h_1e_1c_1f.webp"
+                            class="thumbnail" />
+                    </a>
+                    <div class="flex-div">
+                        <a href="#"><img
+                                src="www.bilibili.tv-images-ftphq/a80be95f3cb758aeeb86daa8b2f1dd52e2f22bcb.jpg@72w_72h_1e_1c_1f.webp" /></a>
+                        <div class="vid-info">
+                            <a href="#">Sample video</a>
+                            <p>Mni-project 1</p>
+                            <p>15m Views</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vid-list">
+                    <a href="#">
+                        <img src="www.bilibili.tv-images-ftphq/b65a3d3feaa55ffe3068ff44c0a6648e.jpeg@720w_405h_1e_1c_1f.webp"
+                            class="thumbnail" />
+                    </a>
+                    <div class="flex-div">
+                        <a href="#"><img
+                                src="www.bilibili.tv-images-ftphq/baad8a515af9c079e27a7a7936356e8eaef1564a.png@72w_72h_1e_1c_1f.webp" /></a>
+                        <div class="vid-info">
+                            <a href="#">Sample video</a>
+                            <p>Mni-project</p>
+                            <p>15m Views</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vid-list">
+                    <a href="#">
+                        <img src="www.bilibili.tv-images-ftphq/bae574ba4447d7d0d2eab9a2b68ba6ee.jpg@720w_405h_1e_1c_1f.webp"
+                            class="thumbnail" />
+                    </a>
+                    <div class="flex-div">
+                        <a href="#"><img
+                                src="www.bilibili.tv-images-ftphq/c6c09e911697f8f39a98d22e2fd9dd21ff60da9b.jpg@72w_72h_1e_1c_1f.webp" /></a>
+                        <div class="vid-info">
+                            <a href="#">Sample video</a>
+                            <p>Mni-project</p>
+                            <p>15m Views</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vid-list">
+                    <a href="#">
+                        <img src="www.bilibili.tv-images-ftphq/bec200c9e58f4f15e572617a4c708673.jpeg@720w_405h_1e_1c_1f.webp"
+                            class="thumbnail" />
+                    </a>
+                    <div class="flex-div">
+                        <a href="#"><img
+                                src="www.bilibili.tv-images-ftphq/c1d02e9ea68bdb61a30cf69e73faa97123453fd1.png@72w_72h_1e_1c_1f.webp" /></a>
+                        <div class="vid-info">
+                            <a href="#">Sample video</a>
+                            <p>Mni-project</p>
+                            <p>15m Views</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vid-list">
+                    <a href="#">
+                        <img src="www.bilibili.tv-images-ftphq/cc9f0866295e5854eeea69c17b675384.jpg@720w_405h_1e_1c_1f.webp"
+                            class="thumbnail" />
+                    </a>
+                    <div class="flex-div">
+                        <a href="#"><img
+                                src="www.bilibili.tv-images-ftphq/4528f446455c1d1bd5b991d7d64de20a74c8c37d.png@72w_72h_1e_1c_1f.webp" /></a>
+                        <div class="vid-info">
+                            <a href="#">Sample video</a>
+                            <p>Mni-project</p>
+                            <p>15m Views</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vid-list">
+                    <a href="#">
+                        <img src="www.bilibili.tv-images-ftphq/d5057fe8372f8c78eb616e13d147d0a907a7f031.jpg@720w_405h_1e_1c_1f.webp"
+                            class="thumbnail" />
+                    </a>
+                    <div class="flex-div">
+                        <a href="#"><img
+                                src="www.bilibili.tv-images-ftphq/32667d0379cccbf41607e98f4fd581353318e188.jpg@72w_72h_1e_1c_1f.webp" /></a>
+                        <div class="vid-info">
+                            <a href="#">Sample video</a>
+                            <p>Mni-project</p>
+                            <p>15m Views</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vid-list">
+                    <a href="#">
+                        <img src="www.bilibili.tv-images-ftphq/df41f7dddf7afe3211a2fcf64759f05e3b21acb5.jpg@720w_405h_1e_1c_1f.webp"
+                            class="thumbnail" />
+                    </a>
+                    <div class="flex-div">
+                        <a href="#"><img
+                                src="www.bilibili.tv-images-ftphq/97683ef13b0ef34a94da00af98cb6eb41349f166.jpg@72w_72h_1e_1c_1f.webp" /></a>
+                        <div class="vid-info">
+                            <a href="#">Sample video</a>
+                            <p>Mni-project</p>
+                            <p>15m Views</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vid-list">
+                    <a href="#">
+                        <img src="www.bilibili.tv-images-ftphq/e7754f76c5b43d97e7def1e570ded56c.jpg@720w_405h_1e_1c_1f.webp"
+                            class="thumbnail" />
+                    </a>
+                    <div class="flex-div">
+                        <a href="#"><img
+                                src="www.bilibili.tv-images-ftphq/0570628b23701e62e303692348bcab169d2cd847.jpg@72w_72h_1e_1c_1f.webp" /></a>
+                        <div class="vid-info">
+                            <a href="#">Sample video</a>
+                            <p>Mni-project</p>
+                            <p>15m Views</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vid-list">
+                    <a href="#">
+                        <img src="www.bilibili.tv-images-ftphq/ea530a65df77609ba6453ec66ca0a0f1.jpg@720w_405h_1e_1c_1f.webp"
+                            class="thumbnail" />
+                    </a>
+                    <div class="flex-div">
+                        <a href="#"><img
+                                src="www.bilibili.tv-images-ftphq/671098086c34e39c903b7e3599c18c25683073d3.jpg@72w_72h_1e_1c_1f.webp" /></a>
+                        <div class="vid-info">
+                            <a href="#">Sample video</a>
+                            <p>Mni-project</p>
+                            <p>15m Views</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vid-list">
+                    <a href="#">
+                        <img src="www.bilibili.tv-images-ftphq/eb57bb82fc544088e378d0f5fe8f19c8.jpg@720w_405h_1e_1c_1f.webp"
+                            class="thumbnail" />
+                    </a>
+                    <div class="flex-div">
+                        <a href="#"><img
+                                src="www.bilibili.tv-images-ftphq/0338945180854586916db4cf372c97864c36d048.jpg@72w_72h_1e_1c_1f.webp" /></a>
+                        <div class="vid-info">
+                            <a href="#">Sample video</a>
+                            <p>Mni-project</p>
+                            <p>15m Views</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vid-list">
+                    <a href="#">
+                        <img src="www.bilibili.tv-images-ftphq/ed00bf4d33e984ed67fe0310f104263c.jpg@720w_405h_1e_1c_1f.webp"
+                            class="thumbnail" />
+                    </a>
+                    <div class="flex-div">
+                        <a href="#"><img
+                                src="www.bilibili.tv-images-ftphq/a80be95f3cb758aeeb86daa8b2f1dd52e2f22bcb.jpg@72w_72h_1e_1c_1f.webp" /></a>
+                        <div class="vid-info">
+                            <a href="#">Sample video</a>
+                            <p>Mni-project 1</p>
+                            <p>15m Views</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vid-list">
+                    <a href="#">
+                        <img src="www.bilibili.tv-images-ftphq/efe5e61af6d73e4c444ee4e45790a61522d3379d.jpg@720w_405h_1e_1c_1f.webp"
+                            class="thumbnail" />
+                    </a>
+                    <div class="flex-div">
+                        <a href="#"><img
+                                src="www.bilibili.tv-images-ftphq/baad8a515af9c079e27a7a7936356e8eaef1564a.png@72w_72h_1e_1c_1f.webp" /></a>
+                        <div class="vid-info">
+                            <a href="#">Sample video</a>
+                            <p>Mni-project</p>
+                            <p>15m Views</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vid-list">
+                    <a href="#">
+                        <img src="www.bilibili.tv-images-ftphq/f3c4f661b65a3b655954c726a69a867c.jpg@720w_405h_1e_1c_1f.webp"
+                            class="thumbnail" />
+                    </a>
+                    <div class="flex-div">
+                        <a href="#"><img
+                                src="www.bilibili.tv-images-ftphq/c6c09e911697f8f39a98d22e2fd9dd21ff60da9b.jpg@72w_72h_1e_1c_1f.webp" /></a>
+                        <div class="vid-info">
+                            <a href="#">Sample video</a>
+                            <p>Mni-project</p>
+                            <p>15m Views</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vid-list">
+                    <a href="#">
+                        <img src="www.bilibili.tv-images-ftphq/f8a6e7f38efb1dc751763f4f954f46bc.jpg@720w_405h_1e_1c_1f.webp"
+                            class="thumbnail" />
+                    </a>
+                    <div class="flex-div">
+                        <a href="#"><img
+                                src="www.bilibili.tv-images-ftphq/c1d02e9ea68bdb61a30cf69e73faa97123453fd1.png@72w_72h_1e_1c_1f.webp" /></a>
+                        <div class="vid-info">
+                            <a href="#">Sample video</a>
+                            <p>Mni-project</p>
+                            <p>15m Views</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vid-list">
+                    <a href="#">
+                        <img src="www.bilibili.tv-images-ftphq/f81ce628c2b5a71527749c5066c107cc535c0416.jpg@720w_405h_1e_1c_1f.webp"
+                            class="thumbnail" />
+                    </a>
+                    <div class="flex-div">
+                        <a href="#"><img
+                                src="www.bilibili.tv-images-ftphq/0338945180854586916db4cf372c97864c36d048.jpg@72w_72h_1e_1c_1f.webp" /></a>
+                        <div class="vid-info">
+                            <a href="#">Sample video</a>
+                            <p>Mni-project</p>
+                            <p>15m Views</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vid-list">
+                    <a href="#">
+                        <img src="www.bilibili.tv-images-ftphq/f93e8bf00e9c0debc267e6722d7a0e41.jpg@720w_405h_1e_1c_1f.webp"
+                            class="thumbnail" />
+                    </a>
+                    <div class="flex-div">
+                        <a href="#"><img
+                                src="www.bilibili.tv-images-ftphq/a80be95f3cb758aeeb86daa8b2f1dd52e2f22bcb.jpg@72w_72h_1e_1c_1f.webp" /></a>
+                        <div class="vid-info">
+                            <a href="#">Sample video</a>
+                            <p>Mni-project 1</p>
+                            <p>15m Views</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vid-list">
+                    <a href="#">
+                        <img src="www.bilibili.tv-images-ftphq/f0279f020fc1c226b64e626e416c9ca1.jpg@720w_405h_1e_1c_1f.webp"
+                            class="thumbnail" />
+                    </a>
+                    <div class="flex-div">
+                        <a href="#"><img
+                                src="www.bilibili.tv-images-ftphq/baad8a515af9c079e27a7a7936356e8eaef1564a.png@72w_72h_1e_1c_1f.webp" /></a>
+                        <div class="vid-info">
+                            <a href="#">Sample video</a>
+                            <p>Mni-project</p>
+                            <p>15m Views</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vid-list">
+                    <a href="#">
+                        <img src="www.bilibili.tv-images-ftphq/f807cd9736c1adc17343f10c0e58cac3.jpg@720w_405h_1e_1c_1f.webp"
+                            class="thumbnail" />
+                    </a>
+                    <div class="flex-div">
+                        <a href="#"><img
+                                src="www.bilibili.tv-images-ftphq/c6c09e911697f8f39a98d22e2fd9dd21ff60da9b.jpg@72w_72h_1e_1c_1f.webp" /></a>
+                        <div class="vid-info">
+                            <a href="#">Sample video</a>
+                            <p>Mni-project</p>
+                            <p>15m Views</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vid-list">
+                    <a href="#">
+                        <img src="www.bilibili.tv-images-ftphq/f79378bdc0207968e636fbb3ab50e7e1.jpg@720w_405h_1e_1c_1f.webp"
+                            class="thumbnail" />
+                    </a>
+                    <div class="flex-div">
+                        <a href="#"><img
+                                src="www.bilibili.tv-images-ftphq/c1d02e9ea68bdb61a30cf69e73faa97123453fd1.png@72w_72h_1e_1c_1f.webp" /></a>
+                        <div class="vid-info">
+                            <a href="#">Sample video</a>
+                            <p>Mni-project</p>
+                            <p>15m Views</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+
+</html>
