@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ICON/22/滑动模块箭头</title>
+    <g id="Anime" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ICON/22/滑动模块箭头">
+            <circle id="椭圆形备份" transform="translate(11.000000, 11.000000) scale(-1, 1) rotate(-90.000000) translate(-11.000000, -11.000000) " cx="11" cy="11" r="11"></circle>
+            <polyline id="路径备份" stroke="#454545" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="translate(10.333333, 10.994045) scale(-1, -1) rotate(135.000000) translate(-10.333333, -10.994045) " points="7 14.3273785 7 7.66071187 13.6666667 7.66071187"></polyline>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>barrage</title>
+    <g id="barrage" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="矩形备份-3" x="0" y="0" width="24" height="24"></rect>
+        <g id="编组-6" transform="translate(2.250000, 4.500000)">
+            <path d="M2.8138852,-1.03584031e-16 L16.6861148,1.03584031e-16 C17.5776335,-6.01853049e-17 17.9009198,0.0928256111 18.2268457,0.267132704 C18.5527716,0.441439796 18.8085602,0.697228371 18.9828673,1.0231543 C19.1571744,1.34908022 19.25,1.67236646 19.25,2.5638852 L19.25,12.4361148 C19.25,13.3276335 19.1571744,13.6509198 18.9828673,13.9768457 C18.8085602,14.3027716 18.5527716,14.5585602 18.2268457,14.7328673 C17.9009198,14.9071744 17.5776335,15 16.6861148,15 L2.8138852,15 C1.92236646,15 1.59908022,14.9071744 1.2731543,14.7328673 C0.947228371,14.5585602 0.691439796,14.3027716 0.517132704,13.9768457 C0.342825611,13.6509198 0.25,13.3276335 0.25,12.4361148 L0.25,2.5638852 C0.25,1.67236646 0.342825611,1.34908022 0.517132704,1.0231543 C0.691439796,0.697228371 0.947228371,0.441439796 1.2731543,0.267132704 C1.59908022,0.0928256111 1.92236646,6.01853049e-17 2.8138852,-1.03584031e-16 Z" id="矩形" fill="#4C93FF"></path>
+            <line x1="8.75" y1="5" x2="15.75" y2="5" id="路径-7" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></line>
+            <line x1="3.75" y1="5" x2="5.75" y2="5" id="路径-7备份" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></line>
+            <line x1="11.25" y1="10" x2="15.75" y2="10" id="路径-7备份-3" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></line>
+            <line x1="6.25" y1="10" x2="8.25" y2="10" id="路径-7备份-2" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></line>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="13px" viewBox="0 0 13 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>back to top</title>
+    <g id="back-to-top" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="矩形" fill="#CCCCCC" fill-rule="nonzero" opacity="0" x="0" y="1.77635684e-15" width="13" height="13"></rect>
+        <path d="M7.1782801,3.62610471 L11.1206296,7.26519656 C11.5264503,7.63980031 11.5517567,8.27245937 11.1771529,8.6782801 C10.9878463,8.88336231 10.7214475,9 10.4423495,9 L2.5576505,9 C2.00536575,9 1.5576505,8.55228475 1.5576505,8 C1.5576505,7.72090195 1.67428819,7.45450321 1.8793704,7.26519656 L5.8217199,3.62610471 C6.20478159,3.2725093 6.79521841,3.2725093 7.1782801,3.62610471 Z" id="三角形" fill="#333333"></path>
+    </g>
+</svg>
